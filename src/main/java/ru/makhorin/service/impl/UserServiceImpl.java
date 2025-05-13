@@ -1,4 +1,4 @@
-package ru.makhorin.service;
+package ru.makhorin.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +11,7 @@ import ru.makhorin.entity.User;
 import ru.makhorin.mapper.EntityMapper;
 import ru.makhorin.repository.SubscriptionRepository;
 import ru.makhorin.repository.UserRepository;
+import ru.makhorin.service.UserService;
 
 import java.util.List;
 import java.util.stream.Collectors;

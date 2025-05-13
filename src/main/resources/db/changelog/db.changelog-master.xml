@@ -4,17 +4,27 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="i.makhorin">
+    <changeSet id="20250513-1_create_table_users" author="i.makhorin">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="users"/>
+            </not>
+        </preConditions>
         <createTable tableName="users">
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="name" type="VARCHAR(255)"/>
-            <column name="email" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(30)"/>
+            <column name="email" type="VARCHAR(60)"/>
         </createTable>
     </changeSet>
 
-    <changeSet id="2" author="i.makhorin">
+    <changeSet id="20250513-2_create_table_subscriptions" author="i.makhorin">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="subscriptions"/>
+            </not>
+        </preConditions>
         <createTable tableName="subscriptions">
             <column name="id" type="BIGINT" autoIncrement="true">
                 <constraints primaryKey="true"/>
@@ -22,7 +32,7 @@
             <column name="user_id" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
-            <column name="service_name" type="VARCHAR(255)"/>
+            <column name="service_name" type="VARCHAR(100)"/>
             <column name="created_at" type="TIMESTAMP"/>
         </createTable>
     </changeSet>
