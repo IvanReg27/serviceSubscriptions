@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.makhorin.dto.SubscriptionDto;
 import ru.makhorin.dto.UserDto;
+import ru.makhorin.service.UserService;
 
 import java.util.List;
 
