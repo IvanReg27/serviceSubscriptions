@@ -1,7 +1,12 @@
 package ru.makhorin;
 
-public class Main {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ServiceSubscriptionsApplication {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SpringApplication.run(ServiceSubscriptionsApplication.class, args);
     }
 }
