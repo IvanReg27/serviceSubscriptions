@@ -1,6 +1,9 @@
+server:
+  port: 8084
+
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/UserSubscriptionDB
+    url: jdbc:postgresql://localhost:5435/UserSubscriptionDB
     username: postgres
     password: postgres
   jpa:

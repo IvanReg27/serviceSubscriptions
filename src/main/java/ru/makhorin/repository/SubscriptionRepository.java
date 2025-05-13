@@ -7,6 +7,11 @@ import ru.makhorin.entity.Subscription;
 
 import java.util.List;
 
+/**
+ * Интерфейс репозитория для работы с подписками пользователя
+ *
+ * @see Subscription
+ */
 public interface SubscriptionRepository extends JpaRepository<Subscription, Long> {
 
     List<Subscription> findByUserId(Long userId);
